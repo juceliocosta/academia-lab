@@ -4,19 +4,14 @@
 
 <section class="intro" style="background-image: url({imgHome});">
 	<div class="intro__wrapper wrap">
-		<h1>Você está pronto para o desafio?</h1>
+		<h1>Você está pronto<br /> para o desafio?</h1>
 		<p>
-			A Acedemia-lab está pronta para te ajudar a chegar mais longe e alcnaçar sua melhor
+			A Acedemia-Lab está pronta para te ajudar a chegar mais longe e alcnaçar sua melhor
 			performance.
 		</p>
-		<a href="/sobre">Sobre</a>
+		<a class="btn" href="/sobre">Sobre</a>
 	</div>
 </section>
-<p>
-	Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quisquam iusto voluptatibus sint
-	dolor? Alias neque tempore ab nam iure illum totam a blanditiis est, velit nemo obcaecati harum
-	sequi!
-</p>
 
 <style>
 	.intro {
@@ -38,5 +33,15 @@
 
 	.intro__wrapper {
 		z-index: 1;
+		max-width: 450px;
+	}
+
+	.btn {
+		margin-top: 24px;
+	}
+
+	p {
+		font-size: calc(18 / 16 * 1rem);
+		margin-top: 16px;
 	}
 </style>
