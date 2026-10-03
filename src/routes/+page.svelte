@@ -1,10 +1,12 @@
 <script>
 	import imgHome from '../assets/musculacao.jpg';
+	import iconMuscle from '../assets/icon-muscle.png';
 </script>
 
 <section class="intro" style="background-image: url({imgHome});">
 	<div class="intro__wrapper wrap">
-		<h1>Você está pronto<br /> para o desafio?</h1>
+		<h1>Você está pronto<br /> para o desafio? <img src="
+			{iconMuscle}" alt="icone de músculo"></h1>
 		<p>
 			A Acedemia-Lab está pronta para te ajudar a chegar mais longe e alcnaçar sua melhor
 			performance.
@@ -43,5 +45,10 @@
 	p {
 		font-size: calc(18 / 16 * 1rem);
 		margin-top: 16px;
+	}
+
+	img {
+		display: inline;
+		max-width: 36px;
 	}
 </style>
