@@ -23,6 +23,8 @@ body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Cabin Variable', sans-serif;
+	background-color: var(--bg);
+	color: #fff;
 }
 
 img,
@@ -69,4 +71,9 @@ h6 {
 #root,
 #__next {
 	isolation: isolate;
+}
+
+.wrap {
+	margin: 0 auto;
+	padding: 0 40px;
 }
