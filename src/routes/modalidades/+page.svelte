@@ -22,3 +22,14 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	.modalidades {
+		margin-top: 60px;
+	}
+	.modalidades__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+</style>
