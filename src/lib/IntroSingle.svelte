@@ -1,0 +1,48 @@
+<script>
+	import { getAssetUrl } from '#lib/assets.js';
+	let { data } = $props();
+</script>
+
+<div class="intro">
+	<div class="intro__wrapper wrap">
+		<div class="intro__info">
+			<h1>{data.name}</h1>
+			<p>{data.content}</p>
+		</div>
+		<div class="intro__img">
+			<img src={getAssetUrl(data.img)} alt={data.name} />
+		</div>
+	</div>
+</div>
+
+<style>
+	.intro__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+		align-items: center;
+	}
+	.intro__img {
+		margin-right: -20px;
+		position: relative;
+		border-radius: 0 0 0 16px;
+		max-height: 360px;
+		overflow: hidden;
+	}
+	.intro__img::before {
+		content: '';
+		display: block;
+		position: absolute;
+		inset: 0;
+		background-color: var(--overlay);
+		border-radius: 0 0 0 16px;
+	}
+	img {
+		object-fit: cover;
+		border-radius: 0 0 0 16px;
+	}
+	p {
+		font-size: calc(18 / 16 * 1rem);
+		margin-top: 8px;
+	}
+</style>
