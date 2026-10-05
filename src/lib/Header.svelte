@@ -31,18 +31,28 @@
 	.logo {
 		max-width: 277px;
 	}
-    nav {
-        margin-left: auto;
-    }
-    ul {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-    }
-    a {
-        color: #fff;
-    }
-    a:not(.btn):hover {
-        text-decoration: underline;
-    }
+	nav {
+		margin-left: auto;
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+	}
+	a {
+		color: #fff;
+	}
+	a:not(.btn):hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 800px) {
+		.header__wrapper {
+			flex-direction: column;
+			justify-content: center;
+		}
+		nav {
+			margin-left: unset;
+		}
+	}
 </style>

@@ -6,8 +6,6 @@
 	import { globalModalidades } from '#lib/stores/modalidades.svelte.js';
 </script>
 
-<h1>Modalidades</h1>
-
 <Intro
 	title="Temos a modalidade certa para você"
 	content="Descubra as diversas modalidades da nossa academia."
@@ -31,5 +29,10 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 20px;
+	}
+	@media (max-width: 800px) {
+		.modalidades__wrapper {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>
