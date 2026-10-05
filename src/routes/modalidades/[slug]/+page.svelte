@@ -1,9 +1,10 @@
 <script>
+	import autoAnimate from '@formkit/auto-animate';
 	import { globalModalidades } from '#lib/stores/modalidades.svelte.js';
 	import IntroSingle from '#lib/IntroSingle.svelte';
 	import Card from '#lib/Card.svelte';
+	import { page } from '$app/state';
 
-	/** @type {import('./$types').PageProps} */
 	let { data } = $props();
 </script>
 
@@ -11,9 +12,11 @@
 
 <section class="modalidades wrap">
 	<h3>Outras modalidades:</h3>
-	<div class="modalidades__wrapper wrap">
+	<div class="modalidades__wrapper wrap" use:autoAnimate>
 		{#each globalModalidades as info}
-			<Card {info} />
+			{#if info.slug !== page.params.slug}
+				<Card {info} />
+			{/if}
 		{/each}
 	</div>
 </section>
