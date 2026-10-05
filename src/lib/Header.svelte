@@ -1,5 +1,10 @@
 <script>
 	import logo from '#lib/assets/logo.png';
+	import { page } from '$app/state';
+
+	// um "console.log" reativo
+	let current = $derived(page.route.id);
+	$inspect(current);
 </script>
 
 <header class="header">
@@ -7,10 +12,18 @@
 		<a href="/" class="logo"><img src={logo} alt="Logo da Academia-lab" /></a>
 		<nav>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/sobre">Sobre</a></li>
-				<li><a href="/modalidades">Modalidades</a></li>
-				<li><a class="btn header__btn" href="#contato">Contatos</a></li>
+				<li><a href="/" class:active={current === '/'}>Home</a></li>
+				<li><a href="/sobre" class:active={current === '/sobre'}>Sobre</a></li>
+				<li>
+					<a
+						href="/modalidades"
+						class:active={current === '/modalidades' || current === '/modalidades/[slug]'}
+						>Modalidades</a
+					>
+				</li>
+				<li>
+					<a class="btn header__btn" href="#contato">Contatos</a>
+				</li>
 			</ul>
 		</nav>
 	</div>
@@ -44,6 +57,11 @@
 	}
 	a:not(.btn):hover {
 		text-decoration: underline;
+	}
+	a.active,
+	a.active:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--feat);
 	}
 
 	@media (max-width: 800px) {
