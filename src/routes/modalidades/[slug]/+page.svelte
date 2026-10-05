@@ -8,7 +8,11 @@
 	let { data } = $props();
 </script>
 
-<IntroSingle {data} />
+<!-- desmonta e monta o componente sempre que 'data' mudar -->
+<!-- Útil para animações rodarem novamente do zero -->
+{#key data}
+	<IntroSingle {data} />
+{/key}
 
 <section class="modalidades wrap">
 	<h3>Outras modalidades:</h3>

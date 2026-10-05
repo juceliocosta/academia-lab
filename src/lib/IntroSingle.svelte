@@ -1,13 +1,14 @@
 <script>
 	import { getAssetUrl } from '#lib/assets.js';
+	import { fly } from 'svelte/transition';
 	let { data } = $props();
 </script>
 
 <div class="intro">
 	<div class="intro__wrapper wrap">
 		<div class="intro__info">
-			<h1>{data.name}</h1>
-			<p>{data.content}</p>
+			<h1 in:fly={{ y: -12, duration: 125, delay: 125 }}>{data.name}</h1>
+			<p in:fly={{ y: -12, duration: 125, delay: 250 }}>{data.content}</p>
 		</div>
 		<div class="intro__img">
 			<img src={getAssetUrl(data.img)} alt={data.name} />

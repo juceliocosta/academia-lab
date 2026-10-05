@@ -10,7 +10,7 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="/sobre">Sobre</a></li>
 				<li><a href="/modalidades">Modalidades</a></li>
-				<li><a class="btn header__btn" href="/">Contatos</a></li>
+				<li><a class="btn header__btn" href="#contato">Contatos</a></li>
 			</ul>
 		</nav>
 	</div>

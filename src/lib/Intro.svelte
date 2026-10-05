@@ -1,19 +1,21 @@
 <script>
+	import { fly } from 'svelte/transition';
+
 	let { title = '', content = '', btn = '', href = '', img = '', icon = '' } = $props();
 </script>
 
 <section class="intro" style="background-image: url({img});">
 	<div class="intro__wrapper wrap">
-		<h1>
+		<h1 in:fly={{ y: -12, duration: 125, delay: 125 }}>
 			{title}
 			{#if icon}
 				<img src={icon} alt="icone" />
 			{/if}
 		</h1>
-		<p>{content}</p>
+		<p in:fly={{ y: -12, duration: 125, delay: 250 }}>{content}</p>
 
 		{#if btn && href}
-			<a class="btn" {href}>{btn}</a>
+			<a class="btn" {href} in:fly={{ y: -12, duration: 125, delay: 375 }}>{btn}</a>
 		{/if}
 	</div>
 </section>
@@ -43,6 +45,9 @@
 
 	.btn {
 		margin-top: 24px;
+		display: inline-block;
+		/* Animação CSS nativa */
+		animation: flyIn 125ms ease-out 375ms backwards;
 	}
 
 	h1 {
@@ -57,5 +62,16 @@
 	img {
 		display: inline;
 		max-width: 36px;
+	}
+	/* roda independente do ciclo de vida das Runas do Svelte 5 */
+	@keyframes flyIn {
+		from {
+			opacity: 0;
+			transform: translateY(-12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 </style>
