@@ -1,11 +1,30 @@
 <script>
-	import { page } from '$app/state';
 	import { globalModalidades } from '#lib/stores/modalidades.svelte.js';
 	import IntroSingle from '#lib/IntroSingle.svelte';
+	import Card from '#lib/Card.svelte';
 
-	let modalidade = $derived(page.params.slug);
-	let data = $derived(globalModalidades.find((e) => e.slug === modalidade));
+	/** @type {import('./$types').PageProps} */
+	let { data } = $props();
 </script>
 
 <IntroSingle {data} />
-<!-- <h1>{data?.name ?? 'Modalidade não encontrada'}</h1> -->
+
+<section class="modalidades wrap">
+	<h3>Outras modalidades:</h3>
+	<div class="modalidades__wrapper wrap">
+		{#each globalModalidades as info}
+			<Card {info} />
+		{/each}
+	</div>
+</section>
+
+<style>
+	.modalidades {
+		margin-top: 60px;
+	}
+	.modalidades__wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+</style>
