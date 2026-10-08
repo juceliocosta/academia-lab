@@ -12,7 +12,7 @@
 			<p>Entre em contato via WhatsApp ou e-mail e fale com um treinador especialista da equiṕe.</p>
 			<div class="footer__btns">
 				<a href="https://wa.me/5584999999999" class="btn">WhatsApp</a>
-				<a href="/mailto:teste@teste.com.br" class="btn">E-mail</a>
+				<a href="mailto:teste@teste.com.br" class="btn">E-mail</a>
 			</div>
 		</div>
 	</div>
