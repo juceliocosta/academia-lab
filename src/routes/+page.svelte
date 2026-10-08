@@ -1,6 +1,6 @@
 <script>
 	import Intro from '#lib/Intro.svelte';
-	import imgHome from '#lib/assets/musculacao.jpg';
+	import imgHome from '#lib/assets/musculacao.avif';
 	import iconMuscle from '#lib/assets/icon-muscle.png';
 </script>
 

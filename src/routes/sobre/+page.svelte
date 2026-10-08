@@ -1,7 +1,7 @@
 <script>
 	import Info from '#lib/Info.svelte';
 	import Intro from '#lib/Intro.svelte';
-	import exercicios from '#lib/assets/exercicios-grupo.jpg';
+	import exercicios from '#lib/assets/exercicios-grupo.avif';
 	import weight from '#lib/assets/icon-weight.png';
 </script>
 

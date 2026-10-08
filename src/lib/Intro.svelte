@@ -9,7 +9,7 @@
 		<h1 in:fly={{ y: -12, duration: 125, delay: 125 }}>
 			{title}
 			{#if icon}
-				<img src={icon} alt="icone" />
+				<img src={icon} alt="icone" width="36" height="36" />
 			{/if}
 		</h1>
 		<p in:fly={{ y: -12, duration: 125, delay: 250 }}>{content}</p>

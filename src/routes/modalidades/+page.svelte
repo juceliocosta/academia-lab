@@ -1,7 +1,7 @@
 <script>
 	import Card from '#lib/Card.svelte';
 	import Intro from '#lib/Intro.svelte';
-	import alongamento from '#lib/assets/alongamento.jpg';
+	import alongamento from '#lib/assets/alongamento.avif';
 	import weight from '#lib/assets/icon-weight.png';
 	import { globalModalidades } from '#lib/stores/modalidades.svelte.js';
 </script>

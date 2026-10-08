@@ -1,5 +1,5 @@
 // O Vite importa todas as imagens de src/lib/assets/ e obtém suas URLs processadas
-const assets = import.meta.glob('#lib/assets/*.{png,jpg,jpeg,svg,webp}', {
+const assets = import.meta.glob('#lib/assets/*.{png,jpg,jpeg,svg,webp,avif}', {
 	eager: true,
 	query: '?url',
 	import: 'default'
